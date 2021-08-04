@@ -42,7 +42,7 @@ public class HeapBasics {
 		return res;
 	}
 
-	private void resetCounters() {
+	public void resetCounters() {
 		setIteracoes(0);
 		setInstrucoes(0);
 		initClock();

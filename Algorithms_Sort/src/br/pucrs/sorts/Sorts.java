@@ -27,11 +27,11 @@ public class Sorts {
 		this.iteracoes = iteracoes;
 	}
 
-	public void incrIteracoes(int incr) {
+	public void incrIteracoes(long incr) {
 		setIteracoes(getIteracoes() + incr);
 	}
 
-	public void incrInstrucoes(int instr) {
+	public void incrInstrucoes(long instr) {
 		setInstrucoes(getInstrucoes() + instr);
 	}
 
@@ -100,7 +100,11 @@ public class Sorts {
 
 		resetCounters();
 
+		hBasics.resetCounters();
 		hBasics.buildMaxHeap(v); 
+		incrInstrucoes(hBasics.getInstrucoes());
+		incrIteracoes(hBasics.getIteracoes());
+		
 		n = v.length; 
 
 		incrInstrucoes(11);
@@ -113,7 +117,11 @@ public class Sorts {
 			aux = v[0];
 			v[0] = v[i];
 			v[i] = aux;
+
+			hBasics.resetCounters();
 			hBasics.maxHeapify(v, 0, --n);
+			incrInstrucoes(hBasics.getInstrucoes());
+			incrIteracoes(hBasics.getIteracoes());
 		}
 
 		res.setTime(getClockSec());
