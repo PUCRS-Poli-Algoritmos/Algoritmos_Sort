@@ -89,7 +89,7 @@ public class Sorts {
 	}
 
 
-	// Insira os métodos de sort aqui.
+	// Insira os mÃ©todos de sort aqui.
 
 	public ContagemRes heapSort(long [] vet) {
 		ContagemRes res = new ContagemRes();
