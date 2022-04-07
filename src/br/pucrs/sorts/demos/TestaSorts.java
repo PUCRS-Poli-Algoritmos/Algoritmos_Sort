@@ -65,7 +65,7 @@ public class TestaSorts {
 		ContagemRes sResInsert, sResQuick, sResMerge, sResBubble0, sResBubble1, sResBubble2, sResBubble2PIOR;
 		int pos;
 
-		System.out.println("Iniciando!");
+		System.out.println("\nIniciando!");
 		for (pos = 0; pos < SORT_LIM; pos ++) {
 			System.out.print("#");
 			vet = srt.geraVetor(TAM_VETOR, TAM_VETOR / 2);
@@ -73,8 +73,8 @@ public class TestaSorts {
 
 			//			sResHeap = srt.heapSort(vet);
 			//			System.out.print(".");
-			sResQuick = srt.quickSort(vet);
-			System.out.print(".");
+			// sResQuick = srt.quickSort(vet);
+			// System.out.print(".");
 			sResMerge = srt.mergeSort(vet);
 			System.out.print(".");
 			sResInsert = srt.insertSort(vet);
@@ -89,7 +89,7 @@ public class TestaSorts {
 			System.out.print(".");
 
 			//			resIterHeap[pos] = sResHeap.getIteracoes();
-			resIterQuick[pos] = sResQuick.getIteracoes();
+			// resIterQuick[pos] = sResQuick.getIteracoes();
 			resIterMerge[pos] = sResMerge.getIteracoes();
 			resIterInsert[pos] = sResInsert.getIteracoes();
 			resIterBubble0[pos] = sResBubble0.getIteracoes();
@@ -98,14 +98,14 @@ public class TestaSorts {
 			resIterBubble2PIOR[pos] = sResBubble2PIOR.getIteracoes();
 
 			//			resInstrHeap[pos] = sResHeap.getInstrucoes();
-			resInstrQuick[pos] = sResQuick.getInstrucoes();
+			// resInstrQuick[pos] = sResQuick.getInstrucoes();
 			resInstrMerge[pos] = sResMerge.getInstrucoes();
 			resInstrInsert[pos] = sResInsert.getInstrucoes();
 			resInstrBubble2[pos] = sResBubble2.getInstrucoes();
 			resInstrBubble2PIOR[pos] = sResBubble2PIOR.getInstrucoes();
 
 			//			resClockHeap[pos] = sResHeap.getTime();
-			resClockQuick[pos] = sResQuick.getTime();
+			// resClockQuick[pos] = sResQuick.getTime();
 			resClockMerge[pos] = sResMerge.getTime();
 			resClockInsert[pos] = sResInsert.getTime();
 			resClockBubble0[pos] = sResBubble0.getTime();
@@ -170,17 +170,17 @@ public class TestaSorts {
 		System.out.println("Tempo em segundos:");
 		exibe(resClockInsert, 20);
 
-		// System.out.println("\nMerge Sort");
-		// System.out.println("Nro iter pela classe complexidade - Melhor Caso - n log n: " +
-		// 		TAM_VETOR * (Math.log10(TAM_VETOR)/Math.log10(2)) +
-		// 		"\nNro iter pela classe complexidade - Pior Caso - n log n: " +
-		// 		TAM_VETOR * (Math.log10(TAM_VETOR)/Math.log10(2)));
-		// System.out.println("Nro iteracoes:");
-		// exibe(resIterMerge, 20);
-		// System.out.println("Nro instrucoes:");
-		// exibe(resInstrMerge, 20);
-		// System.out.println("Tempo em segundos:");
-		// exibe(resClockMerge, 20);
+		System.out.println("\nMerge Sort");
+		System.out.println("Nro iter pela classe complexidade - Melhor Caso - n log n: " +
+				TAM_VETOR * (Math.log10(TAM_VETOR)/Math.log10(2)) +
+				"\nNro iter pela classe complexidade - Pior Caso - n log n: " +
+				TAM_VETOR * (Math.log10(TAM_VETOR)/Math.log10(2)));
+		System.out.println("Nro iteracoes:");
+		exibe(resIterMerge, 20);
+		System.out.println("Nro instrucoes:");
+		exibe(resInstrMerge, 20);
+		System.out.println("Tempo em segundos:");
+		exibe(resClockMerge, 20);
 
 		// System.out.println("\nQuick Sort");
 		// System.out.println("Nro iter pela classe complexidade - Melhor Caso - n log n: " +
@@ -207,52 +207,52 @@ public class TestaSorts {
 
 		//		ITERACOES = 1;
 		//		ELEMENTOS = 4;
-		//		System.out.println("********* Nro de Itera��es - " + ITERACOES + " execu��es de " + ELEMENTOS + " elementos");
+		//		System.out.println("********* Nro de Iterações - " + ITERACOES + " execuções de " + ELEMENTOS + " elementos");
 		//		iteraTestes(ITERACOES, ELEMENTOS);
 		//
 		//		ITERACOES = 1;
 		//		ELEMENTOS = 5;
-		//		System.out.println("********* Nro de Itera��es - " + ITERACOES + " execu��es de " + ELEMENTOS + " elementos");
+		//		System.out.println("********* Nro de Iterações - " + ITERACOES + " execuções de " + ELEMENTOS + " elementos");
 		//		iteraTestes(ITERACOES, ELEMENTOS);
 		//
 		//		ITERACOES = 1;
 		//		ELEMENTOS = 6;
-		//		System.out.println("********* Nro de Itera��es - " + ITERACOES + " execu��es de " + ELEMENTOS + " elementos");
+		//		System.out.println("********* Nro de Iterações - " + ITERACOES + " execuções de " + ELEMENTOS + " elementos");
 		//		iteraTestes(ITERACOES, ELEMENTOS);
 		//
 		//		ITERACOES = 1;
 		//		ELEMENTOS = 7;
-		//		System.out.println("********* Nro de Itera��es - " + ITERACOES + " execu��es de " + ELEMENTOS + " elementos");
+		//		System.out.println("********* Nro de Iterações - " + ITERACOES + " execuções de " + ELEMENTOS + " elementos");
 		//		iteraTestes(ITERACOES, ELEMENTOS);
 		//
 		//		ITERACOES = 1;
 		//		ELEMENTOS = 8;
-		//		System.out.println("********* Nro de Itera��es - " + ITERACOES + " execu��es de " + ELEMENTOS + " elementos");
+		//		System.out.println("********* Nro de Iterações - " + ITERACOES + " execuções de " + ELEMENTOS + " elementos");
 		//		iteraTestes(ITERACOES, ELEMENTOS);
 
-		ITERACOES = 5;
+		ITERACOES = 1;
 		ELEMENTOS = 10;
-		System.out.printf(Locale.FRANCE,"********* Nro de Itera��es - %,8d execu��es de %,8d elementos", ITERACOES, ELEMENTOS);
+		System.out.printf(Locale.FRANCE,"********* Nro de Iterações - %,8d execuções de %,8d elementos\n", ITERACOES, ELEMENTOS);
 		iteraTestes(ITERACOES, ELEMENTOS);
 
-		ITERACOES = 5;
+		ITERACOES = 1;
 		ELEMENTOS = 10_000;
-		System.out.printf(Locale.FRANCE,"********* Nro de Itera��es - %,8d execu��es de %,8d elementos", ITERACOES, ELEMENTOS);
+		System.out.printf(Locale.FRANCE,"********* Nro de Iterações - %,8d execuções de %,8d elementos\n", ITERACOES, ELEMENTOS);
 		iteraTestes(ITERACOES, ELEMENTOS);
 
-		ITERACOES = 5;
+		ITERACOES = 1;
 		ELEMENTOS = 100_000;
-		System.out.printf(Locale.US,"********* Nro de Itera��es - %,8d execu��es de %,8d elementos", ITERACOES, ELEMENTOS);
+		System.out.printf(Locale.US,"********* Nro de Iterações - %,8d execuções de %,8d elementos\n", ITERACOES, ELEMENTOS);
 		iteraTestes(ITERACOES, ELEMENTOS);
 
-		ITERACOES = 5;
+		ITERACOES = 1;
 		ELEMENTOS = 200_000;
-		System.out.printf(Locale.FRENCH,"********* Nro de Itera��es - %,8d execu��es de %,8d elementos", ITERACOES, ELEMENTOS);
+		System.out.printf(Locale.FRENCH,"********* Nro de Iterações - %,8d execuções de %,8d elementos\n", ITERACOES, ELEMENTOS);
 		iteraTestes(ITERACOES, ELEMENTOS);
 
-		ITERACOES = 2;
+		ITERACOES = 1;
 		ELEMENTOS = 500_000;
-		System.out.printf(Locale.FRENCH,"********* Nro de Itera��es - %,8d execu��es de %,8d elementos", ITERACOES, ELEMENTOS);
+		System.out.printf(Locale.FRENCH,"********* Nro de Iterações - %,8d execuções de %,8d elementos\n", ITERACOES, ELEMENTOS);
 		iteraTestes(ITERACOES, ELEMENTOS);
 	}
 }
