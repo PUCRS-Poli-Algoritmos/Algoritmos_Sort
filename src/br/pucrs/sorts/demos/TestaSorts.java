@@ -65,14 +65,14 @@ public class TestaSorts {
 		ContagemRes sResInsert, sResQuick, sResMerge, sResBubble0, sResBubble1, sResBubble2, sResBubble2PIOR;
 		int pos;
 
-		System.out.println("\nIniciando!");
+		System.out.println("\nIniciando Agora!");
 		for (pos = 0; pos < SORT_LIM; pos ++) {
 			System.out.print("#");
 			vet = srt.geraVetor(TAM_VETOR, TAM_VETOR / 2);
 			vetAux = srt.geraVetorInv(TAM_VETOR);
 
-			//			sResHeap = srt.heapSort(vet);
-			//			System.out.print(".");
+			// sResHeap = srt.heapSort(vet);
+			// System.out.print(".");
 			// sResQuick = srt.quickSort(vet);
 			// System.out.print(".");
 			sResMerge = srt.mergeSort(vet);
@@ -116,15 +116,15 @@ public class TestaSorts {
 		}
 		System.out.println("\nFeito!");
 
-		System.out.println("\nBubble Sort v0 - dois la�os fixos");
+		System.out.println("\nBubble Sort v0 - dois laços fixos");
 		System.out.println("Nro iter pela classe complexidade - n ^ 2: " +
 				TAM_VETOR * TAM_VETOR);
 		System.out.println("Nro iteracoes:");
 		exibe(resIterBubble0, 20);
 		System.out.println("Tempo em segundos:");
 		exibe(resClockBubble0, 20);
-
-		System.out.println("\n\nBubble Sort v1 - sempre at� o final do vetor, mas testando se ordenado");
+	
+		System.out.println("\n\nBubble Sort v1 - sempre até o final do vetor, mas testando se ordenado");
 		System.out.println("Nro iter pela classe complexidade - Melhor Caso - n: " +
 				TAM_VETOR +
 				"\nNro iter pela classe complexidade - Pior Caso - n ^ 2: " +
